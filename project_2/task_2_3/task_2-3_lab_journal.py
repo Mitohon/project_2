@@ -1,0 +1,17 @@
+researcher = input("Введите ФИО исследователя: ")
+date = input("Введите дату: ")
+experiment = input("Введите название эксперимента: ")
+conclusion = input("Введите вывод: ")
+line = "+" + "-" * 60 + "+"
+with open("journal.txt", "w", encoding="utf-8") as file:
+    file.write(line + "\n")
+    file.write(f"|  {'Электронный лабораторный журнал':<58}|\n")
+    file.write(line + "\n")
+    file.write(f"|  {('ФИО исследователя : ' + researcher):<58}|\n")
+    file.write(f"|  {('Дата              : ' + date):<58}|\n")
+    file.write(f"|  {('Эксперимент       : ' + experiment):<58}|\n")
+    file.write(line + "\n")
+    file.write(f"|  {'Вывод:':<58}|\n")
+    file.write(f"|  {conclusion:<58}|\n")
+    file.write(line + "\n")
+print("Данные успешно сохранены в файл journal.txt")
